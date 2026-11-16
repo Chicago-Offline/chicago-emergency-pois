@@ -1,0 +1,2050 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.7 375dc00a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-16T20:34:34Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 5276572197,
+  "lat": 41.7235705,
+  "lon": -87.7320890,
+  "tags": {
+    "addr:city": "Oak Lawn",
+    "addr:housenumber": "4440",
+    "addr:postcode": "60453",
+    "addr:state": "IL",
+    "addr:street": "West 95th Street",
+    "amenity": "hospital",
+    "beds": "444",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "healthcare:speciality": "paediatrics;paediatric_surgery",
+    "name": "Advocate Children's Hospital - Oak Lawn",
+    "opening_hours": "24/7",
+    "operator": "Advocate Health Care",
+    "operator:short": "AAH",
+    "operator:type": "private",
+    "operator:wikidata": "Q30254233",
+    "operator:wikipedia": "en:Advocate Aurora Health",
+    "phone": "+1 708 684 8000",
+    "website": "https://www.advocatechildrenshospital.com/",
+    "wikidata": "Q30254234"
+  }
+},
+{
+  "type": "node",
+  "id": 10874634231,
+  "lat": 42.0434377,
+  "lon": -87.8790341,
+  "tags": {
+    "addr:city": "Des Plaines",
+    "addr:housenumber": "555",
+    "addr:postcode": "60016",
+    "addr:state": "IL",
+    "addr:street": "Wilson Lane",
+    "amenity": "hospital",
+    "beds": "146",
+    "healthcare": "hospital",
+    "healthcare:speciality": "psychiatry",
+    "name": "Chicago Behavioral Hospital",
+    "phone": "+1 847 768 5430",
+    "website": "https://chicagobehavioralhospital.com"
+  }
+},
+{
+  "type": "node",
+  "id": 12818003790,
+  "lat": 42.0390580,
+  "lon": -87.8459241,
+  "tags": {
+    "addr:city": "Park Ridge",
+    "addr:housenumber": "1675",
+    "addr:postcode": "60068",
+    "addr:state": "IL",
+    "addr:street": "Dempster Street",
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "healthcare:speciality": "paediatrics",
+    "name": "Advocate Children's Hospital - Park Ridge",
+    "operator": "Advocate Health Care",
+    "operator:type": "private",
+    "operator:wikidata": "Q30254233",
+    "phone": "+1 847 723 2210",
+    "website": "https://www.advocatechildrenshospital.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 28709496,
+  "center": {
+    "lat": 42.0566570,
+    "lon": -87.7400020
+  },
+  "tags": {
+    "addr:city": "Skokie",
+    "addr:housenumber": "9600",
+    "addr:postcode": "60076",
+    "addr:state": "IL",
+    "addr:street": "Gross Point Road",
+    "amenity": "hospital",
+    "beds": "123",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Skokie Hospital",
+    "opening_hours": "24/7",
+    "operator": "Endeavor Health",
+    "operator:wikidata": "Q131345643",
+    "phone": "+1 847 677 9600",
+    "website": "https://www.endeavorhealth.org/locations/skokie-hospital",
+    "wikidata": "Q30280816"
+  }
+},
+{
+  "type": "way",
+  "id": 28755306,
+  "center": {
+    "lat": 41.9882781,
+    "lon": -87.8142959
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "7435",
+    "addr:postcode": "60631",
+    "addr:state": "IL",
+    "addr:street": "West Talcott Avenue",
+    "addr:street:name": "Talcott",
+    "amenity": "hospital",
+    "beds": "360",
+    "emergency": "yes",
+    "gnis:feature_id": "416556",
+    "healthcare": "hospital",
+    "name": "Resurrection Medical Center",
+    "opening_hours": "24/7",
+    "operator": "Prime Healthcare Services",
+    "operator:type": "private",
+    "operator:wikidata": "Q7243267",
+    "phone": "+1 773 774 8000",
+    "website": "https://resurrectionmedicalcenter.com/",
+    "wikidata": "Q30280684"
+  }
+},
+{
+  "type": "way",
+  "id": 31125521,
+  "center": {
+    "lat": 41.9030846,
+    "lon": -87.6833730
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "2233",
+    "addr:postcode": "60622",
+    "addr:state": "IL",
+    "addr:street": "West Division Street",
+    "alt_name": "Presence Saints Mary and Elizabeth Medical Center",
+    "amenity": "hospital",
+    "beds": "361",
+    "check_date": "2026-09-04",
+    "emergency": "yes",
+    "gnis:feature_id": "417534",
+    "healthcare": "hospital",
+    "name": "Saint Mary of Nazareth Hospital",
+    "opening_hours": "24/7",
+    "operator": "Prime Healthcare Services",
+    "operator:type": "private",
+    "operator:wikidata": "Q7243267",
+    "phone": "+1 312 770 2000",
+    "website": "https://saintmaryofnazarethhospital.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 32052949,
+  "center": {
+    "lat": 42.0244685,
+    "lon": -87.6834209
+  },
+  "tags": {
+    "addr:city": "Evanston",
+    "addr:housenumber": "355",
+    "addr:postcode": "60202",
+    "addr:state": "IL",
+    "addr:street": "Ridge Avenue",
+    "amenity": "hospital",
+    "beds": "215",
+    "emergency": "yes",
+    "gnis:feature_id": "417285",
+    "healthcare": "hospital",
+    "name": "Saint Francis Hospital Evanston",
+    "opening_hours": "24/7",
+    "operator": "Prime Healthcare Services",
+    "operator:type": "private",
+    "operator:wikidata": "Q7243267",
+    "phone": "+1 847 316 4000",
+    "website": "https://saintfrancisevanston.org/",
+    "wikidata": "Q7401257",
+    "wikipedia": "en:Saint Francis Hospital of Evanston"
+  }
+},
+{
+  "type": "way",
+  "id": 47055764,
+  "center": {
+    "lat": 41.8962599,
+    "lon": -87.6220270
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "225",
+    "addr:postcode": "60611",
+    "addr:state": "IL",
+    "addr:street": "East Chicago Avenue",
+    "amenity": "hospital",
+    "beds": "360",
+    "building": "hospital",
+    "building:levels": "24",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "healthcare:speciality": "paediatrics",
+    "layer": "1",
+    "name": "Ann & Robert H. Lurie Children's Hospital",
+    "name:etymology:wikidata": "Q4766763",
+    "name:etymology:wikipedia": "en:Ann and Robert H. Lurie Foundation",
+    "opening_hours": "24/7",
+    "operator": "Northwestern Medicine",
+    "operator:type": "private",
+    "operator:wikidata": "Q50036890",
+    "phone": "+1 312 227 4000",
+    "website": "https://www.luriechildrens.org/",
+    "wikidata": "Q6704935",
+    "wikipedia": "en:Lurie Children's Hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 110582617,
+  "center": {
+    "lat": 42.0688036,
+    "lon": -87.9928779
+  },
+  "tags": {
+    "addr:city": "Arlington Heights",
+    "addr:housenumber": "800",
+    "addr:postcode": "60005",
+    "addr:state": "IL",
+    "addr:street": "West Central Road",
+    "amenity": "hospital",
+    "beds": "509",
+    "emergency": "yes",
+    "gnis:feature_id": "414704",
+    "healthcare": "hospital",
+    "name": "Northwest Community Hospital",
+    "opening_hours": "24/7",
+    "operator": "Endeavor Health",
+    "operator:wikidata": "Q131345643",
+    "phone": "+1 847 618 1000",
+    "short_name": "NCH",
+    "source": "Bing",
+    "website": "https://www.endeavorhealth.org/locations/northwest-community-hospital",
+    "wikidata": "Q7060003",
+    "wikipedia": "en:Northwest Community Hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 134578632,
+  "center": {
+    "lat": 41.9731410,
+    "lon": -87.6710508
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "5025",
+    "addr:postcode": "60640",
+    "addr:state": "IL",
+    "addr:street": "North Paulina Street",
+    "amenity": "hospital",
+    "beds": "145",
+    "emergency": "yes",
+    "gnis:feature_id": "1831114",
+    "healthcare": "hospital",
+    "name": "Thorek Memorial Hospital Andersonville",
+    "old_name": "Methodist Hospital of Chicago",
+    "opening_hours": "24/7",
+    "operator": "Thorek Memorial Hospital",
+    "phone": "+1 773 271 9040",
+    "website": "https://thorekandersonville.org/",
+    "wikidata": "Q96392746",
+    "wikipedia": "en:Methodist Hospital of Chicago"
+  }
+},
+{
+  "type": "way",
+  "id": 162513176,
+  "center": {
+    "lat": 41.8721259,
+    "lon": -87.7635298
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "645",
+    "addr:postcode": "60644",
+    "addr:state": "IL",
+    "addr:street": "South Central Avenue",
+    "addr:street:name": "Central",
+    "addr:street:prefix": "South",
+    "addr:street:type": "Avenue",
+    "amenity": "hospital",
+    "beds": "177",
+    "building": "hospital",
+    "building:levels": "6",
+    "chicago:building_id": "367621",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Loretto Hospital",
+    "opening_hours": "24/7",
+    "phone": "+1 773 626 4300",
+    "website": "https://www.lorettohospital.org/"
+  }
+},
+{
+  "type": "way",
+  "id": 186117715,
+  "center": {
+    "lat": 41.8603923,
+    "lon": -87.8350632
+  },
+  "tags": {
+    "addr:city": "Maywood",
+    "addr:housenumber": "2160",
+    "addr:postcode": "60153",
+    "addr:state": "IL",
+    "addr:street": "South 1st Avenue",
+    "amenity": "hospital",
+    "building": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Loyola University Hospital",
+    "operator": "Loyola Medicine",
+    "operator:wikidata": "Q30265483",
+    "website": "https://www.loyolamedicine.org/location/loyola-university-medical-center-2"
+  }
+},
+{
+  "type": "way",
+  "id": 208808881,
+  "center": {
+    "lat": 41.8756198,
+    "lon": -87.7119398
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "3435",
+    "addr:postcode": "60624",
+    "addr:state": "IL",
+    "addr:street": "West Van Buren Street",
+    "amenity": "hospital",
+    "emergency": "no",
+    "gnis:feature_id": "404257",
+    "healthcare": "hospital",
+    "name": "RML Specialty Hospital",
+    "old_name": "Bethany Hospital",
+    "operator": "RML Specialty Hospital",
+    "phone": "+1 773 826 6300",
+    "website": "https://www.rmlspecialtyhospital.org/"
+  }
+},
+{
+  "type": "way",
+  "id": 209479030,
+  "center": {
+    "lat": 41.9615470,
+    "lon": -87.6929705
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "2544",
+    "addr:postcode": "60618",
+    "addr:state": "IL",
+    "addr:street": "West Montrose Avenue",
+    "addr:street:name": "Montrose",
+    "addr:street:prefix": "West",
+    "addr:street:type": "Avenue",
+    "amenity": "hospital",
+    "building": "yes",
+    "chicago:building_id": "127044",
+    "ele": "179",
+    "emergency": "no",
+    "gnis:feature_id": "1831355",
+    "healthcare": "hospital",
+    "name": "Kindred Hospital Chicago (North Campus)",
+    "operator": "Kindred Healthcare",
+    "operator:type": "private",
+    "operator:wikidata": "Q921363",
+    "operator:wikipedia": "en:Kindred Healthcare"
+  }
+},
+{
+  "type": "way",
+  "id": 209730046,
+  "center": {
+    "lat": 41.9753672,
+    "lon": -87.6994118
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "5140",
+    "addr:postcode": "60625",
+    "addr:state": "IL",
+    "addr:street": "North California Avenue",
+    "amenity": "hospital",
+    "beds": "312",
+    "emergency": "yes",
+    "gnis:feature_id": "1836858",
+    "healthcare": "hospital",
+    "name": "Swedish Hospital",
+    "opening_hours": "24/7",
+    "operator": "Endeavor Health",
+    "operator:wikidata": "Q131345643",
+    "phone": "+1 773 878 8200",
+    "website": "https://www.endeavorhealth.org/locations/swedish-hospital",
+    "wikidata": "Q7654629",
+    "wikipedia": "en:Endeavor Swedish Hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 210570610,
+  "center": {
+    "lat": 41.8465780,
+    "lon": -87.6225104
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "2525",
+    "addr:postcode": "60616",
+    "addr:state": "IL",
+    "addr:street": "South Michigan Avenue",
+    "amenity": "hospital",
+    "beds": "412",
+    "contact:facebook": "https://www.facebook.com/insightinstitutechicago",
+    "email": "chicagonewpatient@iinn.com",
+    "emergency": "yes",
+    "fax": "+1-312-638-8320",
+    "gnis:feature_id": "413417",
+    "healthcare": "hospital",
+    "healthcare:speciality": "cardiology;emergency;gastroenterology;surgery;allergology;anaesthetics;behavior",
+    "name": "Insight Hospital & Medical Center",
+    "old_name": "Mercy Hospital & Medical Center",
+    "opening_hours": "24/7",
+    "payment:cards": "yes",
+    "payment:cash": "yes",
+    "payment:cheque": "yes",
+    "phone": "+1-312-567-2000",
+    "website": "https://insightchicago.com/",
+    "wikidata": "Q16951587",
+    "wikipedia": "en:Mercy Hospital and Medical Center"
+  }
+},
+{
+  "type": "way",
+  "id": 211090327,
+  "center": {
+    "lat": 41.9345085,
+    "lon": -87.6378063
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "2900",
+    "addr:postcode": "60657",
+    "addr:state": "IL",
+    "addr:street": "North Lake Shore Drive",
+    "amenity": "hospital",
+    "beds": "338",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Saint Joseph Hospital",
+    "opening_hours": "24/7",
+    "operator": "Ascension",
+    "operator:type": "private",
+    "operator:wikidata": "Q96372437",
+    "phone": "+1 773 665 3000",
+    "website": "https://healthcare.ascension.org/locations/illinois/ilchi/chicago-ascension-saint-joseph-chicago",
+    "wikidata": "Q30280875"
+  }
+},
+{
+  "type": "way",
+  "id": 211323371,
+  "center": {
+    "lat": 41.9671462,
+    "lon": -87.6499931
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "4646",
+    "addr:postcode": "60640",
+    "addr:state": "IL",
+    "addr:street": "North Marine Drive",
+    "alt_name": "Weiss Memorial Hospital",
+    "amenity": "hospital",
+    "beds": "237",
+    "description": "Affiliate of the University of Chicago Hospitals.",
+    "emergency": "yes",
+    "gnis:feature_id": "420716",
+    "healthcare": "hospital",
+    "name": "Louis A. Weiss Memorial Hospital",
+    "opening_hours": "24/7",
+    "operator": "Resilience Healthcare",
+    "phone": "+1 773 878 8700",
+    "website": "https://www.weisshospital.com/",
+    "wikidata": "Q6686580",
+    "wikipedia": "en:Louis A. Weiss Memorial Hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 217925219,
+  "center": {
+    "lat": 41.9197285,
+    "lon": -87.7933491
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "2211",
+    "addr:postcode": "60707",
+    "addr:state": "IL",
+    "addr:street": "North Oak Park Avenue",
+    "amenity": "hospital",
+    "beds": "60",
+    "brand": "Shriners Hospitals for Children",
+    "brand:wikidata": "Q7504109",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "healthcare:speciality": "paediatrics",
+    "name": "Shriners Hospitals for Children",
+    "operator": "Shriners Hospitals for Children",
+    "operator:type": "ngo",
+    "operator:wikidata": "Q7504109",
+    "operator:wikipedia": "en:Shriners Hospitals for Children",
+    "phone": "+1 773 622 5400",
+    "website": "https://www.shrinershospitalsforchildren.org/chicago",
+    "wikidata": "Q30282036"
+  }
+},
+{
+  "type": "way",
+  "id": 222831338,
+  "center": {
+    "lat": 41.7569501,
+    "lon": -87.5848067
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "7531",
+    "addr:postcode": "60649",
+    "addr:state": "IL",
+    "addr:street": "South Stony Island Avenue",
+    "amenity": "hospital",
+    "beds": "86",
+    "emergency": "yes",
+    "gnis:feature_id": "411002",
+    "healthcare": "hospital",
+    "name": "Jackson Park Hospital",
+    "opening_hours": "24/7",
+    "phone": "+1 773 947 7500",
+    "website": "https://www.jacksonparkhospital.org/"
+  }
+},
+{
+  "type": "way",
+  "id": 225179700,
+  "center": {
+    "lat": 41.8054694,
+    "lon": -87.9205333
+  },
+  "tags": {
+    "addr:city": "Hinsdale",
+    "addr:housenumber": "120",
+    "addr:postcode": "60521",
+    "addr:state": "IL",
+    "addr:street": "North Oak Street",
+    "amenity": "hospital",
+    "beds": "261",
+    "emergency": "yes",
+    "gnis:feature_id": "1837365",
+    "healthcare": "hospital",
+    "name": "UChicago Medicine AdventHealth Hinsdale",
+    "old_name": "AMITA Health Adventist Medical Center, Hinsdale",
+    "opening_hours": "24/7",
+    "operator": "UChicago Medicine",
+    "operator:type": "university",
+    "operator:wikidata": "Q140332073",
+    "phone": "+1 630 856 9000",
+    "website": "https://www.uchicagomedicine.org/find-a-location/uchicago-medicine-adventhealth-hinsdale",
+    "wikidata": "Q115978222"
+  }
+},
+{
+  "type": "way",
+  "id": 228663039,
+  "center": {
+    "lat": 41.7691196,
+    "lon": -87.6922202
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "2701",
+    "addr:postcode": "60629",
+    "addr:state": "IL",
+    "addr:street": "West 68th Street",
+    "amenity": "hospital",
+    "beds": "160",
+    "emergency": "yes",
+    "gnis:feature_id": "410435",
+    "healthcare": "hospital",
+    "name": "Holy Cross Hospital",
+    "opening_hours": "24/7",
+    "operator": "Sinai Health System",
+    "operator:wikidata": "Q30280701",
+    "phone": "+1 773 884 9000",
+    "website": "https://www.sinaichicago.org/en/find-a-location/results/holy-cross-hospital/",
+    "wikidata": "Q5885264",
+    "wikipedia": "en:Holy Cross Hospital (Chicago)"
+  }
+},
+{
+  "type": "way",
+  "id": 229123103,
+  "center": {
+    "lat": 41.8199428,
+    "lon": -88.0078132
+  },
+  "tags": {
+    "addr:city": "Downers Grove",
+    "addr:housenumber": "3815",
+    "addr:postcode": "60515",
+    "addr:state": "IL",
+    "addr:street": "Highland Avenue",
+    "amenity": "hospital",
+    "beds": "284",
+    "emergency": "yes",
+    "gnis:feature_id": "1771779",
+    "healthcare": "hospital",
+    "name": "Advocate Good Samaritan Hospital",
+    "opening_hours": "24/7",
+    "operator": "Advocate Health Care",
+    "operator:short": "AAH",
+    "operator:type": "private",
+    "operator:wikidata": "Q30254233",
+    "operator:wikipedia": "en:Advocate Aurora Health",
+    "phone": "+1 630 275 5900",
+    "website": "https://www.advocatehealth.com/gsam/",
+    "wikidata": "Q4686885"
+  }
+},
+{
+  "type": "way",
+  "id": 229438623,
+  "center": {
+    "lat": 41.7901902,
+    "lon": -87.6036927
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "5481;5841",
+    "addr:postcode": "60637",
+    "addr:state": "IL",
+    "addr:street": "South Maryland Avenue",
+    "amenity": "hospital",
+    "beds": "811",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "healthcare:speciality": "trauma",
+    "name": "University of Chicago Medicine Campus",
+    "opening_hours": "24/7",
+    "operator": "UChicago Medicine",
+    "operator:type": "university",
+    "operator:wikidata": "Q140332073",
+    "phone": "+1 773 702 1000",
+    "website": "https://uchicagomedicine.org/",
+    "wheelchair": "yes",
+    "wikidata": "Q7895258",
+    "wikipedia": "en:University of Chicago Medical Center"
+  }
+},
+{
+  "type": "way",
+  "id": 230163731,
+  "center": {
+    "lat": 42.0383386,
+    "lon": -87.8484797
+  },
+  "tags": {
+    "addr:city": "Park Ridge",
+    "addr:housenumber": "1775",
+    "addr:postcode": "60068",
+    "addr:state": "IL",
+    "addr:street": "Dempster Street",
+    "amenity": "hospital",
+    "beds": "638",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Advocate Lutheran General Hospital",
+    "opening_hours": "24/7",
+    "operator": "Advocate Health Care",
+    "operator:short": "AAH",
+    "operator:type": "private",
+    "operator:wikidata": "Q30254233",
+    "operator:wikipedia": "en:Advocate Aurora Health",
+    "phone": "+1 847 723 2210",
+    "website": "https://www.advocatehealth.com/luth/",
+    "wikidata": "Q4686887",
+    "wikipedia": "en:Advocate Lutheran General Hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 231185703,
+  "center": {
+    "lat": 41.9703296,
+    "lon": -87.6506917
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "4840",
+    "addr:postcode": "60640",
+    "addr:state": "IL",
+    "addr:street": "North Marine Drive",
+    "amenity": "hospital",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "healthcare:speciality": "psychiatry",
+    "name": "Chicago Lakeshore Hospital",
+    "phone": "+1 773 878 9700",
+    "website": "https://www.chicagolakeshorehospital.com/",
+    "wikidata": "Q16890311",
+    "wikipedia": "en:Chicago Lakeshore Hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 239938453,
+  "center": {
+    "lat": 41.6925568,
+    "lon": -87.6255457
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "45",
+    "addr:postcode": "60628",
+    "addr:state": "IL",
+    "addr:street": "West 111th Street",
+    "amenity": "hospital",
+    "beds": "134",
+    "emergency": "yes",
+    "gnis:feature_id": "426653",
+    "healthcare": "hospital",
+    "name": "Roseland Community Hospital",
+    "opening_hours": "24/7",
+    "phone": "+1 773 995 3000",
+    "website": "https://www.roselandhospital.org/",
+    "wikidata": "Q96632113"
+  }
+},
+{
+  "type": "way",
+  "id": 241870223,
+  "center": {
+    "lat": 41.7263061,
+    "lon": -87.5669702
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "2320",
+    "addr:postcode": "60617",
+    "addr:state": "IL",
+    "addr:street": "East 93rd Street",
+    "amenity": "hospital",
+    "beds": "205",
+    "emergency": "yes",
+    "gnis:feature_id": "418737",
+    "healthcare": "hospital",
+    "name": "Advocate Trinity Hospital",
+    "old_name": "South Chicago Community Hospital",
+    "opening_hours": "24/7",
+    "operator": "Advocate Health Care",
+    "operator:short": "AAH",
+    "operator:type": "private",
+    "operator:wikidata": "Q30254233",
+    "operator:wikipedia": "en:Advocate Aurora Health",
+    "phone": "+1 773 967 2000",
+    "polling_station": "yes",
+    "website": "https://www.advocatehealth.com/trin/",
+    "wikidata": "Q30289340"
+  }
+},
+{
+  "type": "way",
+  "id": 242228765,
+  "center": {
+    "lat": 41.8618114,
+    "lon": -87.6941992
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "1500",
+    "addr:postcode": "60608",
+    "addr:state": "IL",
+    "addr:street": "South Fairfield Avenue",
+    "amenity": "hospital",
+    "beds": "319",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Mount Sinai Hospital",
+    "name:etymology:wikidata": "Q377485",
+    "name:etymology:wikipedia": "en:Mount Sinai",
+    "opening_hours": "24/7",
+    "operator": "Sinai Health System",
+    "operator:wikidata": "Q30280701",
+    "phone": "+1 773 542 2000",
+    "website": "https://www.sinaichicago.org/en/find-a-location/results/mount-sinai-hospital/",
+    "wikidata": "Q6923674",
+    "wikipedia": "en:Mount Sinai Medical Center"
+  }
+},
+{
+  "type": "way",
+  "id": 244945457,
+  "center": {
+    "lat": 41.8030644,
+    "lon": -87.6137653
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "500",
+    "addr:postcode": "60615",
+    "addr:state": "IL",
+    "addr:street": "East 51st Street",
+    "amenity": "hospital",
+    "beds": "85",
+    "emergency": "yes",
+    "gnis:feature_id": "416264",
+    "healthcare": "hospital",
+    "name": "Provident Hospital of Cook County",
+    "opening_hours": "24/7",
+    "operator": "Cook County Health and Hospitals System",
+    "operator:type": "public",
+    "operator:wikidata": "Q30286975",
+    "phone": "+1 312 572 2000",
+    "website": "https://cookcountyhealth.org/locations/provident-hospital-of-cook-county/",
+    "wikidata": "Q7252521",
+    "wikipedia": "en:Provident Hospital (Chicago)"
+  }
+},
+{
+  "type": "way",
+  "id": 273290677,
+  "center": {
+    "lat": 41.8642319,
+    "lon": -87.9353080
+  },
+  "tags": {
+    "addr:city": "Elmhurst",
+    "addr:country": "US",
+    "addr:housenumber": "155",
+    "addr:postcode": "60126",
+    "addr:state": "IL",
+    "addr:street": "East Brush Hill Road",
+    "amenity": "hospital",
+    "beds": "259",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Elmhurst Hospital",
+    "opening_hours": "24/7",
+    "operator": "Endeavor Health",
+    "operator:type": "public",
+    "operator:wikidata": "Q131345643",
+    "phone": "+1 331 221 1000",
+    "website": "https://www.endeavorhealth.org/locations/elmhurst-hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 279274162,
+  "center": {
+    "lat": 41.7967050,
+    "lon": -87.8860147
+  },
+  "tags": {
+    "addr:city": "La Grange",
+    "addr:housenumber": "5101",
+    "addr:postcode": "60525",
+    "addr:state": "IL",
+    "addr:street": "South Willow Springs Road",
+    "amenity": "hospital",
+    "beds": "196",
+    "emergency": "yes",
+    "gnis:feature_id": "1831302",
+    "healthcare": "hospital",
+    "name": "UChicago Medicine AdventHealth La Grange",
+    "old_name": "LaGrange Memorial Hospital",
+    "old_name_1": "Adventist La Grange Memorial Hospital",
+    "opening_hours": "24/7",
+    "operator": "UChicago Medicine",
+    "operator:type": "university",
+    "operator:wikidata": "Q140332073",
+    "phone": "+1 708 245 9000",
+    "website": "https://www.uchicagomedicine.org/find-a-location/uchicago-medicine-adventhealth-la-grange",
+    "wikidata": "Q30286495"
+  }
+},
+{
+  "type": "way",
+  "id": 369283358,
+  "center": {
+    "lat": 41.6813300,
+    "lon": -88.0840063
+  },
+  "tags": {
+    "addr:city": "Bolingbrook",
+    "addr:housenumber": "500",
+    "addr:postcode": "60440",
+    "addr:state": "IL",
+    "addr:street": "Remington Boulevard",
+    "amenity": "hospital",
+    "beds": "138",
+    "emergency": "yes",
+    "gnis:feature_id": "1822239",
+    "healthcare": "hospital",
+    "name": "UChicago Medicine AdventHealth Bolingbrook",
+    "old_name": "Adventist Bolingbrook Hospital",
+    "old_name_1": "AMITA Health Adventist Medical Center",
+    "opening_hours": "24/7",
+    "operator": "UChicago Medicine",
+    "operator:type": "university",
+    "operator:wikidata": "Q140332073",
+    "phone": "+1 630 312 5000",
+    "website": "https://www.uchicagomedicine.org/find-a-location/uchicago-medicine-adventhealth-bolingbrook",
+    "wikidata": "Q101579776"
+  }
+},
+{
+  "type": "way",
+  "id": 384156599,
+  "center": {
+    "lat": 41.8663413,
+    "lon": -87.7674657
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "5730",
+    "addr:postcode": "60644",
+    "addr:state": "IL",
+    "addr:street": "West Roosevelt Road",
+    "amenity": "hospital",
+    "building": "hospital",
+    "chicago:building_id": "892671",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "healthcare:speciality": "psychiatry",
+    "name": "Hartgrove Behavioral Health System",
+    "website": "https://www.hartgrovehospital.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 406072957,
+  "center": {
+    "lat": 41.8321020,
+    "lon": -87.7921818
+  },
+  "tags": {
+    "addr:city": "Berwyn",
+    "addr:housenumber": "3231",
+    "addr:postcode": "60402",
+    "addr:state": "IL",
+    "addr:street": "South Euclid Avenue",
+    "amenity": "hospital",
+    "beds": "374",
+    "emergency": "yes",
+    "gnis:feature_id": "412787",
+    "healthcare": "hospital",
+    "name": "MacNeal Hospital",
+    "opening_hours": "24/7",
+    "operator": "Loyola Medicine",
+    "operator:wikidata": "Q30265483",
+    "phone": "+1 708 783 9100",
+    "website": "https://www.loyolamedicine.org/location/macneal-hospital",
+    "wikidata": "Q30280800"
+  }
+},
+{
+  "type": "way",
+  "id": 406075701,
+  "center": {
+    "lat": 41.8784852,
+    "lon": -87.8030832
+  },
+  "tags": {
+    "addr:city": "Oak Park",
+    "addr:housenumber": "520",
+    "addr:postcode": "60304",
+    "addr:state": "IL",
+    "addr:street": "South Maple Avenue",
+    "amenity": "hospital",
+    "beds": "201",
+    "emergency": "yes",
+    "gnis:feature_id": "414843",
+    "healthcare": "hospital",
+    "name": "Rush Oak Park Hospital",
+    "name:etymology:wikidata": "Q656478",
+    "name:etymology:wikipedia": "en:Benjamin Rush",
+    "opening_hours": "24/7",
+    "operator": "Rush University Medical Center",
+    "operator:type": "university",
+    "operator:wikidata": "Q1535116",
+    "phone": "+1 708 383 9300",
+    "website": "https://www.rush.edu/locations/rush-oak-park-hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 428373899,
+  "center": {
+    "lat": 41.9456753,
+    "lon": -87.7679738
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "5645",
+    "addr:postcode": "60634",
+    "addr:state": "IL",
+    "addr:street": "West Addison Street",
+    "amenity": "hospital",
+    "beds": "299",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Community First Medical Center",
+    "old_name": "Our Lady of the Resurrection Medical Center",
+    "opening_hours": "24/7",
+    "operator": "Community First Healthcare",
+    "phone": "+1 773 282 7000",
+    "website": "https://www.cfmedicalcenter.com/",
+    "wikidata": "Q97845664"
+  }
+},
+{
+  "type": "way",
+  "id": 440555192,
+  "center": {
+    "lat": 41.7221528,
+    "lon": -87.7305037
+  },
+  "tags": {
+    "addr:city": "Oak Lawn",
+    "addr:housenumber": "4400",
+    "addr:postcode": "60453",
+    "addr:state": "IL",
+    "addr:street": "West 95th Street",
+    "amenity": "hospital",
+    "beds": "802",
+    "emergency": "yes",
+    "gnis:feature_id": "426825",
+    "healthcare": "hospital",
+    "name": "Advocate Christ Medical Center",
+    "opening_hours": "24/7",
+    "operator": "Advocate Health Care",
+    "operator:short": "AAH",
+    "operator:type": "private",
+    "operator:wikidata": "Q30254233",
+    "operator:wikipedia": "en:Advocate Aurora Health",
+    "phone": "+1 708 684 8000",
+    "website": "https://www.advocatehealth.com/cmc/",
+    "wikidata": "Q97355774",
+    "wikipedia": "en:Advocate Christ Medical Center"
+  }
+},
+{
+  "type": "way",
+  "id": 527062348,
+  "center": {
+    "lat": 41.6075021,
+    "lon": -87.6592449
+  },
+  "tags": {
+    "addr:city": "Harvey",
+    "addr:housenumber": "1",
+    "addr:postcode": "60426",
+    "addr:state": "IL",
+    "addr:street": "Ingalls Drive",
+    "amenity": "hospital",
+    "beds": "485",
+    "emergency": "yes",
+    "gnis:feature_id": "410890",
+    "healthcare": "hospital",
+    "name": "Ingalls Memorial Hospital",
+    "opening_hours": "24/7",
+    "operator": "UChicago Medicine",
+    "operator:type": "university",
+    "operator:wikidata": "Q140332073",
+    "phone": "+1 708 333 2300",
+    "toilets:wheelchair": "yes",
+    "website": "https://www.uchicagomedicine.org/find-a-location/uchicago-medicine-at-ingalls-harvey",
+    "wheelchair": "yes",
+    "wikidata": "Q6031854",
+    "wikipedia": "en:Ingalls Memorial Hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 537392585,
+  "center": {
+    "lat": 41.8702819,
+    "lon": -87.6777939
+  },
+  "tags": {
+    "access": "private",
+    "addr:city": "Chicago",
+    "addr:housenumber": "820",
+    "addr:postcode": "60612",
+    "addr:state": "IL",
+    "addr:street": "South Damen Avenue",
+    "addr:street:name": "Damen",
+    "addr:street:prefix": "South",
+    "addr:street:type": "Avenue",
+    "alt_name": "West Side VA Medical Center",
+    "amenity": "hospital",
+    "beds": "220",
+    "brand": "VA",
+    "brand:wikidata": "Q6580225",
+    "chicago:building_id": "368188",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "healthcare:for": "veteran",
+    "healthcare:speciality": "general;psychiatry;dentistry;orthopaedics;vaccination;cardiology;intensive;emergency;physiatry",
+    "name": "Jesse Brown VA Medical Center",
+    "name:etymology:wikidata": "Q1386815",
+    "name:etymology:wikipedia": "en:Jesse Brown",
+    "opening_hours": "24/7",
+    "operator": "Veterans Health Administration",
+    "operator:short": "VA",
+    "operator:type": "government",
+    "operator:wikidata": "Q6580225",
+    "operator:wikipedia": "en:Veterans Health Administration",
+    "phone": "+1 312 569 8387",
+    "short_name": "VA",
+    "website": "https://www.chicago.va.gov/"
+  }
+},
+{
+  "type": "way",
+  "id": 550912500,
+  "center": {
+    "lat": 42.0926944,
+    "lon": -87.8540679
+  },
+  "tags": {
+    "addr:city": "Glenview",
+    "addr:housenumber": "2100",
+    "addr:postcode": "60026",
+    "addr:state": "IL",
+    "addr:street": "Pfingsten Road",
+    "amenity": "hospital",
+    "beds": "173",
+    "emergency": "yes",
+    "gnis:feature_id": "2033578",
+    "healthcare": "hospital",
+    "name": "Glenbrook Hospital",
+    "opening_hours": "24/7",
+    "operator": "Endeavor Health",
+    "operator:wikidata": "Q131345643",
+    "phone": "+1 847 657 5800",
+    "website": "https://www.endeavorhealth.org/locations/glenbrook-hospital",
+    "wikidata": "Q30280548"
+  }
+},
+{
+  "type": "way",
+  "id": 550941626,
+  "center": {
+    "lat": 42.0050011,
+    "lon": -88.0160488
+  },
+  "tags": {
+    "addr:city": "Elk Grove Village",
+    "addr:housenumber": "800",
+    "addr:postcode": "60007",
+    "addr:state": "IL",
+    "addr:street": "Biesterfield Road",
+    "amenity": "hospital",
+    "beds": "387",
+    "emergency": "yes",
+    "gnis:feature_id": "1825706",
+    "healthcare": "hospital",
+    "name": "Ascension Alexian Brothers Medical Center",
+    "opening_hours": "24/7",
+    "operator": "Ascension",
+    "operator:type": "private",
+    "operator:wikidata": "Q96372437",
+    "phone": "+1 847 437 5500",
+    "website": "https://healthcare.ascension.org/locations/illinois/ilchi/elk-grove-village-ascension-alexian-brothers?intent_source=location_title&result_position=7",
+    "wikidata": "Q30254354"
+  }
+},
+{
+  "type": "way",
+  "id": 550946047,
+  "center": {
+    "lat": 42.0558530,
+    "lon": -87.8910997
+  },
+  "tags": {
+    "addr:city": "Des Plaines",
+    "addr:housenumber": "100",
+    "addr:postcode": "60016",
+    "addr:state": "IL",
+    "addr:street": "North River Road",
+    "amenity": "hospital",
+    "beds": "128",
+    "emergency": "yes",
+    "gnis:feature_id": "410441",
+    "healthcare": "hospital",
+    "name": "Holy Family Medical Center",
+    "opening_hours": "24/7",
+    "operator": "Prime Healthcare Services",
+    "operator:type": "private",
+    "operator:wikidata": "Q7243267",
+    "phone": "+1 847 297 1800",
+    "website": "https://holyfamilymedicalcenter.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 551055084,
+  "center": {
+    "lat": 41.8653897,
+    "lon": -87.8290670
+  },
+  "tags": {
+    "addr:city": "Forest Park",
+    "addr:housenumber": "8311",
+    "addr:postcode": "60130",
+    "addr:state": "IL",
+    "addr:street": "West Roosevelt Road",
+    "amenity": "hospital",
+    "emergency": "no",
+    "gnis:feature_id": "1832867",
+    "healthcare": "hospital",
+    "healthcare:speciality": "psychiatry",
+    "name": "Riveredge Hospital",
+    "phone": "+1 708 771 7000",
+    "website": "https://www.riveredgehospital.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 551057998,
+  "center": {
+    "lat": 41.9102506,
+    "lon": -87.8429192
+  },
+  "tags": {
+    "addr:city": "Melrose Park",
+    "addr:housenumber": "701",
+    "addr:postcode": "60160",
+    "addr:state": "IL",
+    "addr:street": "West North Avenue",
+    "amenity": "hospital",
+    "beds": "247",
+    "emergency": "yes",
+    "gnis:feature_id": "409212",
+    "healthcare": "hospital",
+    "name": "Gottlieb Memorial Hospital",
+    "opening_hours": "24/7",
+    "operator": "Loyola Medicine",
+    "operator:type": "university",
+    "operator:wikidata": "Q30265483",
+    "phone": "+1 708 681 3200",
+    "website": "https://www.loyolamedicine.org/location/gottlieb-memorial-hospital-2",
+    "wikidata": "Q93220088"
+  }
+},
+{
+  "type": "way",
+  "id": 551062630,
+  "center": {
+    "lat": 41.8916193,
+    "lon": -87.7762713
+  },
+  "tags": {
+    "addr:city": "Oak Park",
+    "addr:housenumber": "3",
+    "addr:postcode": "60302",
+    "addr:state": "IL",
+    "addr:street": "Erie Court",
+    "amenity": "hospital",
+    "beds": "234",
+    "emergency": "yes",
+    "gnis:feature_id": "1772679",
+    "healthcare": "hospital",
+    "name": "West Suburban Medical Center",
+    "opening_hours": "24/7",
+    "operator": "Resilience Healthcare",
+    "phone": "+1 708 383 6200",
+    "website": "https://www.westsuburbanmc.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 551092377,
+  "center": {
+    "lat": 41.8906204,
+    "lon": -87.7204294
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "520",
+    "addr:postcode": "60624",
+    "addr:state": "IL",
+    "addr:street": "North Ridgeway Avenue",
+    "amenity": "hospital",
+    "emergency": "no",
+    "gnis:feature_id": "408894",
+    "healthcare": "hospital",
+    "healthcare:speciality": "psychiatry",
+    "name": "Garfield Park Behavioral Hospital",
+    "phone": "+1 773 265 3700",
+    "website": "https://www.garfieldparkhospital.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 551141093,
+  "center": {
+    "lat": 41.8620600,
+    "lon": -87.6951374
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "1401",
+    "addr:postcode": "60608",
+    "addr:state": "IL",
+    "addr:street": "South California Avenue",
+    "amenity": "hospital",
+    "beds": "319",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "healthcare:speciality": "physiatry",
+    "name": "Schwab Rehabilitation Hospital",
+    "opening_hours": "24/7",
+    "operator": "Sinai Health System",
+    "operator:wikidata": "Q30280701",
+    "phone": "+1 773 522 2010",
+    "website": "https://schwab.sinaichicago.org/",
+    "wikidata": "Q30288626"
+  }
+},
+{
+  "type": "way",
+  "id": 551141105,
+  "center": {
+    "lat": 41.8550460,
+    "lon": -87.6973844
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "2875",
+    "addr:postcode": "60623",
+    "addr:state": "IL",
+    "addr:street": "West 19th Street",
+    "amenity": "hospital",
+    "beds": "151",
+    "emergency": "yes",
+    "gnis:feature_id": "417172",
+    "healthcare": "hospital",
+    "name": "Saint Anthony Hospital",
+    "name:etymology:wikidata": "Q167477",
+    "name:etymology:wikipedia": "en:Anthony of Padua",
+    "opening_hours": "24/7",
+    "phone": "+1 773 484 1000",
+    "website": "https://www.sahchicago.org/"
+  }
+},
+{
+  "type": "way",
+  "id": 551155326,
+  "center": {
+    "lat": 41.7489755,
+    "lon": -87.5692426
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "8012",
+    "addr:postcode": "60617",
+    "addr:state": "IL",
+    "addr:street": "South Crandon Avenue",
+    "amenity": "hospital",
+    "beds": "170",
+    "emergency": "yes",
+    "gnis:feature_id": "418835",
+    "healthcare": "hospital",
+    "name": "South Shore Hospital",
+    "opening_hours": "24/7",
+    "phone": "+1 773 356 5000",
+    "website": "https://www.southshorehospital.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 551168052,
+  "center": {
+    "lat": 41.7226893,
+    "lon": -87.6928663
+  },
+  "tags": {
+    "addr:city": "Evergreen Park",
+    "addr:housenumber": "2800",
+    "addr:postcode": "60805",
+    "addr:state": "IL",
+    "addr:street": "West 95th Street",
+    "amenity": "hospital",
+    "beds": "298",
+    "emergency": "yes",
+    "gnis:feature_id": "426839",
+    "healthcare": "hospital",
+    "name": "Little Company of Mary Hospital",
+    "opening_hours": "24/7",
+    "operator": "OSF HealthCare",
+    "operator:wikidata": "Q7073001",
+    "phone": "+1 708 422 6200",
+    "website": "https://www.osfhealthcare.org/hospitals/little-company-of-mary",
+    "wikidata": "Q6649607",
+    "wikipedia": "en:Little Company of Mary Hospital (Evergreen Park)"
+  }
+},
+{
+  "type": "way",
+  "id": 551182671,
+  "center": {
+    "lat": 41.6691360,
+    "lon": -87.8131161
+  },
+  "tags": {
+    "addr:city": "Palos Heights",
+    "addr:housenumber": "12251",
+    "addr:postcode": "60463",
+    "addr:state": "IL",
+    "addr:street": "South 80th Avenue",
+    "amenity": "hospital",
+    "beds": "425",
+    "emergency": "yes",
+    "gnis:feature_id": "1737243",
+    "healthcare": "hospital",
+    "name": "Palos Hospital",
+    "opening_hours": "24/7",
+    "operator": "Northwestern Medicine",
+    "operator:type": "private",
+    "operator:wikidata": "Q50036890",
+    "phone": "+1 708 923 4000",
+    "website": "https://www.nm.org/locations/palos-hospital",
+    "wikidata": "Q99762779"
+  }
+},
+{
+  "type": "way",
+  "id": 551323602,
+  "center": {
+    "lat": 41.9149569,
+    "lon": -88.0571790
+  },
+  "tags": {
+    "addr:city": "Glendale Heights",
+    "addr:housenumber": "701",
+    "addr:postcode": "60139",
+    "addr:state": "IL",
+    "addr:street": "Winthrop Avenue",
+    "amenity": "hospital",
+    "beds": "143",
+    "emergency": "yes",
+    "gnis:feature_id": "1807991",
+    "healthcare": "hospital",
+    "name": "UChicago Medicine AdventHealth GlenOaks",
+    "old_name": "Glendale Heights Community Hospital",
+    "old_name_1": "AMITA Health Adventist Medical Center",
+    "opening_hours": "24/7",
+    "operator": "UChicago Medicine",
+    "operator:type": "university",
+    "operator:wikidata": "Q140332073",
+    "phone": "+1 630 545 8000",
+    "website": "https://www.uchicagomedicine.org/find-a-location/uchicago-medicine-adventhealth-glenoaks"
+  }
+},
+{
+  "type": "way",
+  "id": 551352443,
+  "center": {
+    "lat": 41.7863926,
+    "lon": -87.9155246
+  },
+  "tags": {
+    "addr:city": "Hinsdale",
+    "addr:housenumber": "5601",
+    "addr:postcode": "60521",
+    "addr:state": "IL",
+    "addr:street": "South County Line Road",
+    "amenity": "hospital",
+    "emergency": "no",
+    "gnis:feature_id": "1836836",
+    "healthcare": "hospital",
+    "name": "RML Specialty Hospital Hinsdale",
+    "old_name": "Suburban Hospital",
+    "operator": "RML Specialty Hospital",
+    "phone": "+1 630 286 4000",
+    "website": "https://www.rmlspecialtyhospital.org/",
+    "wikidata": "Q30270306"
+  }
+},
+{
+  "type": "way",
+  "id": 692254839,
+  "center": {
+    "lat": 41.9074616,
+    "lon": -87.6853336
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "1431",
+    "addr:postcode": "60622",
+    "addr:state": "IL",
+    "addr:street": "North Claremont Avenue",
+    "amenity": "hospital",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "name": "Saint Elizabeth Hospital",
+    "operator": "Prime Healthcare Services",
+    "operator:type": "private",
+    "operator:wikidata": "Q7243267",
+    "website": "https://saintmaryofnazarethhospital.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1083665117,
+  "center": {
+    "lat": 41.7437748,
+    "lon": -87.8471742
+  },
+  "tags": {
+    "addr:housenumber": "9059",
+    "addr:postcode": "60458",
+    "addr:street": "West 81st Street",
+    "amenity": "hospital",
+    "check_date": "2026-07-22",
+    "healthcare": "hospital",
+    "name": "Forest Med-Surg Center"
+  }
+},
+{
+  "type": "way",
+  "id": 1331761639,
+  "center": {
+    "lat": 41.9068995,
+    "lon": -87.8904951
+  },
+  "tags": {
+    "addr:city": "Northlake",
+    "addr:housenumber": "365",
+    "addr:postcode": "60164",
+    "addr:state": "IL",
+    "addr:street": "East North Avenue",
+    "amenity": "hospital",
+    "building": "hospital",
+    "healthcare": "hospital",
+    "name": "Kindred Hospital Chicago Northlake",
+    "operator": "Kindred Healthcare",
+    "operator:type": "private",
+    "operator:wikidata": "Q921363"
+  }
+},
+{
+  "type": "way",
+  "id": 1446950437,
+  "center": {
+    "lat": 41.7773307,
+    "lon": -87.5712893
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "6501",
+    "addr:postcode": "60649",
+    "addr:state": "IL",
+    "addr:street": "South Promontory Drive",
+    "addr:street:name": "Promontory",
+    "addr:street:prefix": "South",
+    "addr:street:type": "Drive",
+    "amenity": "hospital",
+    "chicago:building_id": "535850",
+    "emergency": "no",
+    "gnis:feature_id": "1831256",
+    "healthcare": "hospital",
+    "healthcare:speciality": "paediatrics;paediatric_surgery",
+    "name": "La Rabida Children's Hospital",
+    "phone": "+1 773 363 6700",
+    "website": "https://larabida.org/",
+    "wikidata": "Q6464743",
+    "wikipedia": "en:La Rabida Children's Hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 1500111121,
+  "center": {
+    "lat": 41.9852150,
+    "lon": -87.7271725
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 1528609481,
+  "center": {
+    "lat": 42.0024128,
+    "lon": -88.0172070
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Rehabilitation Hospital",
+    "operator": "Ascension",
+    "operator:type": "private",
+    "operator:wikidata": "Q96372437"
+  }
+},
+{
+  "type": "way",
+  "id": 1528609482,
+  "center": {
+    "lat": 42.0022765,
+    "lon": -88.0201225
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "operator": "Ascension",
+    "operator:type": "private",
+    "operator:wikidata": "Q96372437"
+  }
+},
+{
+  "type": "way",
+  "id": 1566883243,
+  "center": {
+    "lat": 41.9552197,
+    "lon": -87.7999260
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "4200",
+    "addr:postcode": "60634",
+    "addr:state": "IL",
+    "addr:street": "North Oak Park Avenue",
+    "amenity": "hospital",
+    "emergency": "no",
+    "gnis:feature_id": "406054",
+    "healthcare": "hospital",
+    "healthcare:speciality": "psychiatry",
+    "name": "Chicago-Read Mental Health Center",
+    "operator": "Illinois Department of Human Services' Division of Mental Health",
+    "operator:type": "public",
+    "phone": "+1 773 794 4000",
+    "wikidata": "Q5095449",
+    "wikipedia": "en:Chicago-Read Mental Health Center"
+  }
+},
+{
+  "type": "relation",
+  "id": 14685787,
+  "center": {
+    "lat": 41.9545579,
+    "lon": -87.6522935
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "850",
+    "addr:postcode": "60613",
+    "addr:state": "IL",
+    "addr:street": "West Irving Park Road",
+    "amenity": "hospital",
+    "beds": "218",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Thorek Memorial Hospital",
+    "name:etymology:wikidata": "Q6795306",
+    "name:etymology:wikipedia": "en:Max Thorek",
+    "opening_hours": "24/7",
+    "phone": "+1 773 525 6780",
+    "type": "multipolygon",
+    "website": "https://www.thorek.org/"
+  }
+},
+{
+  "type": "relation",
+  "id": 17607255,
+  "center": {
+    "lat": 41.8950816,
+    "lon": -87.6219152
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "251",
+    "addr:postcode": "60611",
+    "addr:state": "IL",
+    "addr:street": "East Huron Street",
+    "amenity": "hospital",
+    "beds": "894",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Northwestern Memorial Hospital",
+    "opening_hours": "24/7",
+    "operator": "Northwestern Medicine",
+    "operator:type": "private",
+    "operator:wikidata": "Q50036890",
+    "phone": "+1 312 926 2000",
+    "type": "multipolygon",
+    "website": "https://www.nm.org/locations/northwestern-memorial-hospital",
+    "wheelchair": "yes",
+    "wikidata": "Q7060339",
+    "wikipedia": "en:Northwestern Memorial Hospital"
+  }
+},
+{
+  "type": "relation",
+  "id": 18239404,
+  "center": {
+    "lat": 41.9372095,
+    "lon": -87.6515963
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "836",
+    "addr:postcode": "60657",
+    "addr:state": "IL",
+    "addr:street": "West Wellington Avenue",
+    "amenity": "hospital",
+    "beds": "397",
+    "emergency": "yes",
+    "gnis:feature_id": "1830635",
+    "healthcare": "hospital",
+    "name": "Advocate Illinois Masonic Hospital",
+    "opening_hours": "24/7",
+    "operator": "Advocate Health Care",
+    "operator:short": "AAH",
+    "operator:type": "private",
+    "operator:wikidata": "Q30254233",
+    "operator:wikipedia": "en:Advocate Aurora Health",
+    "phone": "+1 773 975 1600",
+    "type": "multipolygon",
+    "website": "https://www.advocatehealth.com/immc/",
+    "wikidata": "Q30254235"
+  }
+},
+{
+  "type": "relation",
+  "id": 18292356,
+  "center": {
+    "lat": 41.8577005,
+    "lon": -87.8380667
+  },
+  "tags": {
+    "access": "private",
+    "addr:city": "Hines",
+    "addr:housenumber": "5000",
+    "addr:postcode": "60141",
+    "addr:state": "IL",
+    "addr:street": "South 5th Avenue",
+    "alt_name": "Hines VA Hospital",
+    "amenity": "hospital",
+    "beds": "438",
+    "brand": "VA",
+    "brand:wikidata": "Q6580225",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "healthcare:for": "veteran",
+    "name": "Edward Hines, Jr. VA Hospital",
+    "name:etymology:wikidata": "Q16992275",
+    "name:etymology:wikipedia": "en:Edward Hines Lumber Company",
+    "opening_hours": "24/7",
+    "operator": "Veterans Health Administration",
+    "operator:short": "VA",
+    "operator:type": "government",
+    "operator:wikidata": "Q6580225",
+    "operator:wikipedia": "en:Veterans Health Administration",
+    "phone": "+1 708 202 8387",
+    "short_name": "VA",
+    "type": "multipolygon",
+    "website": "https://www.hines.va.gov/",
+    "wikidata": "Q16890853",
+    "wikipedia": "en:Edward Hines Jr. Veterans Administration Hospital"
+  }
+},
+{
+  "type": "relation",
+  "id": 18292357,
+  "center": {
+    "lat": 41.8629849,
+    "lon": -87.8362476
+  },
+  "tags": {
+    "addr:city": "Hines",
+    "addr:housenumber": "1200",
+    "addr:postcode": "60141",
+    "addr:state": "IL",
+    "addr:street": "South 1st Avenue",
+    "amenity": "hospital",
+    "emergency": "no",
+    "gnis:feature_id": "1830988",
+    "healthcare": "hospital",
+    "healthcare:speciality": "psychiatry",
+    "name": "Madden Mental Health Center",
+    "operator": "Illinois Department of Human Services",
+    "operator:type": "public",
+    "phone": "+1 708 338 7400",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 18292358,
+  "center": {
+    "lat": 41.8581828,
+    "lon": -87.8352086
+  },
+  "tags": {
+    "addr:city": "Maywood",
+    "addr:housenumber": "2160",
+    "addr:postcode": "60153",
+    "addr:state": "IL",
+    "addr:street": "South 1st Avenue",
+    "amenity": "hospital",
+    "beds": "547",
+    "brand:wikidata": "Q30265483",
+    "emergency": "yes",
+    "gnis:feature_id": "1831398",
+    "healthcare": "hospital",
+    "name": "Loyola University Medical Center",
+    "opening_hours": "24/7",
+    "operator": "Loyola Medicine",
+    "operator:wikidata": "Q30265483",
+    "phone": "+1 888 584 7888",
+    "type": "multipolygon",
+    "website": "https://www.loyolamedicine.org/location/loyola-university-medical-center-2",
+    "wikidata": "Q6694611",
+    "wikipedia": "en:Loyola University Medical Center"
+  }
+},
+{
+  "type": "relation",
+  "id": 18907604,
+  "center": {
+    "lat": 41.9013299,
+    "lon": -87.6999191
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "1044",
+    "addr:postcode": "60622",
+    "addr:state": "IL",
+    "addr:street": "North Francisco Avenue",
+    "amenity": "hospital",
+    "beds": "210",
+    "emergency": "yes",
+    "gnis:feature_id": "1831552",
+    "healthcare": "hospital",
+    "name": "Humboldt Park Health",
+    "old_name": "Norwegian American Hospital",
+    "opening_hours": "24/7",
+    "phone": "+1 877 624 9333",
+    "type": "multipolygon",
+    "website": "https://www.nahospital.org/",
+    "wikidata": "Q60775326",
+    "wikipedia": "en:Humboldt Park Health"
+  }
+},
+{
+  "type": "relation",
+  "id": 20009652,
+  "center": {
+    "lat": 42.0647041,
+    "lon": -87.6843962
+  },
+  "tags": {
+    "addr:city": "Evanston",
+    "addr:housenumber": "2650",
+    "addr:postcode": "60201",
+    "addr:state": "IL",
+    "addr:street": "Ridge Avenue",
+    "amenity": "hospital",
+    "beds": "354",
+    "emergency": "yes",
+    "gnis:feature_id": "408103",
+    "healthcare": "hospital",
+    "name": "Evanston Hospital",
+    "opening_hours": "24/7",
+    "operator": "Endeavor Health",
+    "operator:type": "university",
+    "operator:wikidata": "Q131345643",
+    "phone": "+1 847 570 2000",
+    "type": "multipolygon",
+    "website": "https://www.endeavorhealth.org/locations/evanston-hospital",
+    "wikidata": "Q50573096"
+  }
+},
+{
+  "type": "relation",
+  "id": 20590371,
+  "center": {
+    "lat": 41.8732883,
+    "lon": -87.6738758
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "1969",
+    "addr:postcode": "60612",
+    "addr:state": "IL",
+    "addr:street": "West Ogden Avenue",
+    "alt_name": "Stroger Hospital",
+    "amenity": "hospital",
+    "beds": "464",
+    "emergency": "yes",
+    "gnis:feature_id": "1826093",
+    "healthcare": "hospital",
+    "name": "John H. Stroger, Jr. Hospital of Cook County",
+    "name:etymology:wikidata": "Q6259457",
+    "name:etymology:wikipedia": "en:John Stroger",
+    "old_name": "Cook County Hospital",
+    "opening_hours": "24/7",
+    "operator": "Cook County Health and Hospitals System",
+    "operator:type": "public",
+    "operator:wikidata": "Q30286975",
+    "phone": "+1 312 864 6000",
+    "type": "multipolygon",
+    "website": "https://cookcountyhealth.org/locations/john-h-stroger-jr-hospital-of-cook-county/",
+    "wikidata": "Q6237101",
+    "wikipedia": "en:John H. Stroger Jr. Hospital of Cook County"
+  }
+},
+{
+  "type": "relation",
+  "id": 20590975,
+  "center": {
+    "lat": 41.8734186,
+    "lon": -87.6667093
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "1653",
+    "addr:postcode": "60612",
+    "addr:state": "IL",
+    "addr:street": "West Congress Parkway",
+    "alt_name": "Rush-Presbyterian-St. Luke's Medical Center",
+    "amenity": "hospital",
+    "beds": "727",
+    "emergency": "yes",
+    "gnis:feature_id": "1832936",
+    "healthcare": "hospital",
+    "healthcare:speciality": "general;emergency;internal",
+    "name": "Rush University Medical Center",
+    "name:etymology:wikidata": "Q656478",
+    "name:etymology:wikipedia": "en:Benjamin Rush",
+    "opening_hours": "24/7",
+    "operator": "Rush University Medical Center",
+    "operator:type": "university",
+    "operator:wikidata": "Q1535116",
+    "phone": "+1 888 352 7874",
+    "toilets:wheelchair": "yes",
+    "type": "multipolygon",
+    "website": "https://www.rush.edu/",
+    "wheelchair": "yes",
+    "wikidata": "Q1535116",
+    "wikipedia": "en:Rush University Medical Center"
+  }
+},
+{
+  "type": "relation",
+  "id": 20600200,
+  "center": {
+    "lat": 41.8696986,
+    "lon": -87.6704529
+  },
+  "tags": {
+    "abbr_name": "UICH",
+    "addr:city": "Chicago",
+    "addr:housenumber": "1740",
+    "addr:postcode": "60612",
+    "addr:state": "IL",
+    "addr:street": "West Taylor Street",
+    "addr:street:name": "Wood",
+    "addr:street:prefix": "South",
+    "addr:street:type": "Street",
+    "amenity": "hospital",
+    "beds": "462",
+    "building": "hospital",
+    "building:levels": "10",
+    "chicago:building_id": "369512",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "University of Illinois at Chicago Hospital",
+    "opening_hours": "24/7",
+    "operator": "UI Health",
+    "operator:type": "university",
+    "operator:wikidata": "Q7895529",
+    "phone": "+1-866-600-2273",
+    "ref": "UIH",
+    "toilets:wheelchair": "yes",
+    "type": "multipolygon",
+    "website": "https://hospital.uillinois.edu/",
+    "wheelchair": "yes",
+    "wikidata": "Q7895529",
+    "wikipedia": "en:University of Illinois Hospital & Health Sciences System"
+  }
+},
+{
+  "type": "relation",
+  "id": 21467109,
+  "center": {
+    "lat": 41.7786009,
+    "lon": -87.6333856
+  },
+  "tags": {
+    "addr:city": "Chicago",
+    "addr:housenumber": "326",
+    "addr:postcode": "60621",
+    "addr:state": "IL",
+    "addr:street": "West 64th Street",
+    "amenity": "hospital",
+    "beds": "202",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Saint Bernard Hospital",
+    "opening_hours": "24/7",
+    "phone": "+1 773 962 3900",
+    "source": "http://www.stbh.org/",
+    "type": "multipolygon",
+    "website": "https://www.stbh.org/",
+    "wikidata": "Q6623598",
+    "wikipedia": "en:List of hospitals in Illinois"
+  }
+}
+
+  ]
+}
