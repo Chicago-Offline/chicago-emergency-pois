@@ -8,7 +8,7 @@ department.
 
 Snapshot date: **2026-11-16**
 
-| Category | Count |
+| `class` | Count |
 |---|---|
 | bleed-kit | 381 |
 | fire-station | 92 |
