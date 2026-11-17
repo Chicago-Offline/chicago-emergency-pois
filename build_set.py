@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build sets/chicago-emergency-2026/pois.json from raw open-data snapshots.
+"""Build pois.geojson (Canonical Point Schema v1) from raw open-data snapshots.
 
 Reproducible replacement for the ad-hoc one-off that first generated this set.
 Re-run after refreshing anything in raw/.
@@ -18,14 +18,60 @@ Two things this gets right that the first pass did not:
    "Field Museum - Bleed Kit". Unusable in ATAK search, and it collided the
    uuid5 marker uids until build_personal.py started keying on lat/lon too.
 """
-import json, collections, os, re
+import json, collections, os, re, uuid
 
 RAW = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'raw')
 HERE = os.path.dirname(os.path.abspath(__file__))
 # Self-contained: the built set lands next to the raw data it came from.
 # POI_OUT overrides it for consumers that vendor this set elsewhere.
-OUT = os.environ.get('POI_OUT') or os.path.join(HERE, 'pois.json')
+OUT = os.environ.get('POI_OUT') or os.path.join(HERE, 'pois.geojson')
 FETCHED = '2026-11-16'
+
+# --- Canonical Point Schema v1 ----------------------------------------------
+# Spec lives in the private mapping workspace; cps_validate.py is vendored into
+# this repo (stdlib only) so the public set can be checked without it.
+#
+# This set is PUBLIC and ODbL-1.0. Those two facts are declared once, here, at
+# set level, and the validator treats an unset value as an error rather than
+# defaulting - defaults are how private data leaks into a public artifact.
+SET_NAME = 'chicago-emergency-2026'
+VISIBILITY = 'public'
+LICENCE = 'ODbL-1.0'
+
+# Stable id namespace. Must match mapping/scripts/ingest_pois_json.py, so a
+# record built here and the same record ingested from the legacy pois.json
+# resolve to the SAME uuid. That is what makes the migration verifiable by
+# diff instead of by trust.
+CPS_NS = uuid.uuid5(uuid.NAMESPACE_URL, "https://github.com/emuehlstein/cps/v1")
+
+# class -> (Maki symbol, OSM tags).
+# 'class' is the rendering hint, 'osm' is the authority on what the thing is.
+# 'x-' prefixes a deliberate extension where Maki has no equivalent; the
+# prefix is what lets the validator tell an extension from a typo.
+CLASS_MAP = {
+    'aed':            ('defibrillator', {'emergency': 'defibrillator'}),
+    'bleed-kit':      ('x-bleed-kit',   {'emergency': 'bleeding_control_kit'}),
+    'fire-station':   ('fire-station',  {'amenity': 'fire_station'}),
+    'police-station': ('police',        {'amenity': 'police'}),
+    'library':        ('library',       {'amenity': 'library'}),
+    'warming-center': ('shelter',       {'amenity': 'shelter',
+                                         'shelter_type': 'warming'}),
+    'hospital-er':    ('hospital',      {'amenity': 'hospital',
+                                         'emergency': 'yes'}),
+}
+
+# Per-record provenance. CPS requires dct:source on EVERY feature - a set-level
+# citation alone cannot tell you which of eight datasets a given row came from,
+# and ODbL attribution is owed per source.
+SOURCES = {
+    'mrzc-49gi': 'Chicago Data Portal dataset mrzc-49gi (AED / Stop-the-Bleed), fetched ' + FETCHED,
+    '28km-gtjn': 'Chicago Data Portal dataset 28km-gtjn (fire stations), fetched ' + FETCHED,
+    'z8bn-74gv': 'Chicago Data Portal dataset z8bn-74gv (police stations), fetched ' + FETCHED,
+    'x8fc-8rcq': 'Chicago Data Portal dataset x8fc-8rcq (library branches), fetched ' + FETCHED,
+    'qhfc-4cw2': 'Chicago Data Portal dataset qhfc-4cw2 (senior centers), fetched ' + FETCHED,
+    'bspy-6mw8': 'Chicago Data Portal dataset bspy-6mw8 (DFSS community service centers), fetched ' + FETCHED,
+    'osm':       'OpenStreetMap contributors via Overpass (node+way+relation), fetched ' + FETCHED,
+}
 
 
 def load(fn):
@@ -58,18 +104,44 @@ def latlon(r):
 pois = []
 
 
-def add(name, lat, lon, cat, icon, address=None, notes=None, tags=None):
+def add(name, lat, lon, cat, source, address=None, notes=None, tags=None):
+    """Append one CPS v1 Feature.
+
+    Takes a class name, not an icon: the symbol and the OSM tags are both
+    derived from CLASS_MAP so they cannot drift apart. An unregistered class
+    is a hard error rather than a silently unstyled marker.
+    """
     if lat is None or lon is None:
         return
-    p = {'name': name, 'lat': round(float(lat), 6), 'lon': round(float(lon), 6),
-         'category': cat, 'icon': icon}
-    if address:
-        p['address'] = address
+    if cat not in CLASS_MAP:
+        raise SystemExit('unregistered class %r on %r - add it to CLASS_MAP' % (cat, name))
+    symbol, osm = CLASS_MAP[cat]
+    lat = round(float(lat), 6)
+    lon = round(float(lon), 6)
+
+    props = {'title': name}
     if notes:
-        p['notes'] = notes
+        props['description'] = notes
+    props['marker-symbol'] = symbol
+    props['class'] = cat
+    props['osm'] = dict(osm)
+    if address:
+        props['addr:full'] = address
     if tags:
-        p['tags'] = tags
-    pois.append(p)
+        props['tags'] = tags
+    props['dct:source'] = SOURCES[source]
+    props['dct:modified'] = FETCHED
+
+    # uuid5 over set|title|lon,lat - reproducible across runs and machines, so
+    # re-running this builder produces no git churn, and it doubles as the
+    # ATAK dedupe key that stops a rebuilt package stacking duplicate markers.
+    key = '%s|%s|%s,%s' % (SET_NAME, name, lon, lat)
+    pois.append({
+        'type': 'Feature',
+        'id': str(uuid.uuid5(CPS_NS, key)),
+        'geometry': {'type': 'Point', 'coordinates': [lon, lat]},
+        'properties': props,
+    })
 
 
 # --- AEDs and Stop-the-Bleed kits -------------------------------------------
@@ -104,23 +176,20 @@ for (bldg, addr, dev), rows in sorted(groups.items()):
             count, '; '.join(spots[:8]) + (' ...' if len(spots) > 8 else ''))
     else:
         notes = '%d device(s).' % count
-    notes += (' Source: Chicago Data Portal mrzc-49gi, fetched %s.'
-              ' Inside a building - access depends on the building being open.' % FETCHED)
+    notes += ' Inside a building - access depends on the building being open.'
     add(name, lat, lon,
-        'aed' if is_aed else 'bleed-kit',
-        'medical-aed' if is_aed else 'medical-first-aid',
+        'aed' if is_aed else 'bleed-kit', 'mrzc-49gi',
         address=addr + ', Chicago IL', notes=notes,
         tags=['chicago', 'indoor', 'aed' if is_aed else 'bleed-kit'])
 
 # --- Fire stations -----------------------------------------------------------
 for r in load('28km-gtjn.json'):
     lat, lon = latlon(r)
-    add('CFD %s' % (r.get('name') or '?'), lat, lon, 'fire-station', 'firehouse',
+    add('CFD %s' % (r.get('name') or '?'), lat, lon, 'fire-station', '28km-gtjn',
         address='%s, %s IL %s' % (titlecase(r.get('address')),
                                   titlecase(r.get('city')), r.get('zip') or ''),
-        notes='Chicago Fire Department engine %s. Staffed 24/7. '
-              'Source: Chicago Data Portal 28km-gtjn, fetched %s.'
-              % (r.get('engine') or '?', FETCHED),
+        notes='Chicago Fire Department engine %s. Staffed 24/7.'
+              % (r.get('engine') or '?'),
         tags=['chicago', '24-7', 'staffed'])
 
 # --- Police stations ---------------------------------------------------------
@@ -128,37 +197,34 @@ for r in load('z8bn-74gv.json'):
     lat, lon = latlon(r)
     d = r.get('district_name') or r.get('district') or '?'
     nm = 'CPD Headquarters' if d.lower() == 'headquarters' else 'CPD %s District' % d
-    add(nm, lat, lon, 'police-station', 'police',
+    add(nm, lat, lon, 'police-station', 'z8bn-74gv',
         address='%s, %s IL %s' % (r.get('address'), r.get('city'), r.get('zip') or ''),
-        notes='Chicago Police district station. Lobby staffed 24/7. '
-              'Source: Chicago Data Portal z8bn-74gv, fetched %s.' % FETCHED,
+        notes='Chicago Police district station. Lobby staffed 24/7.',
         tags=['chicago', '24-7', 'staffed'])
 
 # --- Libraries ---------------------------------------------------------------
 for r in load('x8fc-8rcq.json'):
     lat, lon = latlon(r)
     url = (r.get('website') or {}).get('url', '')
-    add('CPL %s' % (r.get('branch_') or '?'), lat, lon, 'library', 'Libraries',
+    add('CPL %s' % (r.get('branch_') or '?'), lat, lon, 'library', 'x8fc-8rcq',
         address='%s, %s IL %s' % (r.get('address'), r.get('city'), r.get('zip') or ''),
         notes='Chicago Public Library branch. Hours: %s. Phone %s. %s '
-              'Daytime warming/cooling refuge, public restrooms, power and wifi. '
-              'Source: Chicago Data Portal x8fc-8rcq, fetched %s.'
+              'Daytime warming/cooling refuge, public restrooms, power and wifi.'
               % ((r.get('service_hours') or 'unknown').strip(),
-                 r.get('phone') or 'n/a', url, FETCHED),
+                 r.get('phone') or 'n/a', url),
         tags=['chicago', 'daytime-only', 'warming', 'cooling', 'wifi', 'restroom'])
 
 # --- Senior centers ----------------------------------------------------------
 for r in load('qhfc-4cw2.json'):
     lat, lon = latlon(r)
     add('%s Senior Center' % (r.get('site_name') or '?'), lat, lon,
-        'warming-center', 'Emergency Shelter',
+        'warming-center', 'qhfc-4cw2',
         address='%s, %s IL %s' % (r.get('address'), r.get('city'), r.get('zip') or ''),
         notes='%s. Hours: %s. Phone %s. Designated warming/cooling site during '
-              'weather emergencies - call to confirm extended hours. '
-              'Source: Chicago Data Portal qhfc-4cw2, fetched %s.'
+              'weather emergencies - call to confirm extended hours.'
               % (r.get('program') or 'Senior center',
                  (r.get('hours_of_operation') or 'unknown').strip(),
-                 r.get('phone') or 'n/a', FETCHED),
+                 r.get('phone') or 'n/a'),
         tags=['chicago', 'warming', 'cooling', 'hours-unverified'])
 
 # --- DFSS community service centers -----------------------------------------
@@ -168,15 +234,14 @@ for r in load('qhfc-4cw2.json'):
 for r in load('bspy-6mw8.json'):
     lat, lon = latlon(r)
     add('DFSS %s' % (r.get('site') or '?'), lat, lon,
-        'warming-center', 'Emergency Shelter',
+        'warming-center', 'bspy-6mw8',
         address='%s, %s IL %s' % (r.get('address'), r.get('city'), r.get('zip') or ''),
         notes="DFSS Community Service Center. Dataset lists %s, but these are the "
               "city's primary warming centers and run EXTENDED / 24-hour hours during "
               "extreme-cold activations - the dataset does NOT reflect that. Call 311 "
-              "or %s to confirm. Source: Chicago Data Portal bspy-6mw8, fetched %s; "
-              "hours hand-annotated."
+              "or %s to confirm. Hours hand-annotated, not from the dataset."
               % ((r.get('hours_of_operation') or 'unknown').strip(),
-                 r.get('phone') or '311', FETCHED),
+                 r.get('phone') or '311'),
         tags=['chicago', 'warming', 'primary', 'hours-corrected'])
 
 # --- Hospitals with an emergency department ---------------------------------
@@ -196,9 +261,7 @@ for e in load('hospitals-all.json'):
         notes += ' Phone %s.' % t['phone']
     if t.get('operator'):
         notes += ' Operator: %s.' % t['operator']
-    notes += (' Source: OpenStreetMap via Overpass (node+way+relation), fetched %s.'
-              % FETCHED)
-    add(t['name'], lat, lon, 'hospital-er', 'Hospitals',
+    add(t['name'], lat, lon, 'hospital-er', 'osm',
         address=a or None, notes=notes,
         tags=['chicago', '24-7', 'hospital', 'er'])
 
@@ -216,19 +279,37 @@ DESCRIPTION = (
     "hours during an activation. Those notes are hand-corrected. Call 311 to confirm "
     "before relying on any of this." % FETCHED)
 
-doc = {'name': 'Chicago Emergency 2026', 'description': DESCRIPTION, 'pois': pois}
-json.dump(doc, open(OUT, 'w'), indent=2)
+ATTRIBUTION = ('Chicago Data Portal (City of Chicago open data) and '
+               'OpenStreetMap contributors. OSM-derived records are '
+               'ODbL-1.0; see ATTRIBUTION.md.')
 
-counts = collections.Counter(p['category'] for p in pois)
-keys = {(p['category'], p['name'], p['lat'], p['lon']) for p in pois}
-names = collections.Counter(p['name'] for p in pois)
+doc = {
+    'type': 'FeatureCollection',
+    'name': 'Chicago Emergency 2026',
+    'description': DESCRIPTION,
+    # Declared, never defaulted. cps_validate.py errors on either being unset.
+    'visibility': VISIBILITY,
+    'dct:license': LICENCE,
+    'dct:source': ATTRIBUTION,
+    'dct:modified': FETCHED,
+    'features': pois,
+}
+with open(OUT, 'w') as fh:
+    json.dump(doc, fh, indent=2, ensure_ascii=False)
+    fh.write('\n')
+
+prop = lambda f, k: f['properties'].get(k)
+counts = collections.Counter(prop(f, 'class') for f in pois)
+ids = {f['id'] for f in pois}
+names = collections.Counter(prop(f, 'title') for f in pois)
 print('wrote %s' % OUT)
-print('total POIs: %d' % len(pois))
+print('total features: %d  (visibility=%s licence=%s)' % (len(pois), VISIBILITY, LICENCE))
 for k, v in sorted(counts.items(), key=lambda x: -x[1]):
     print('  %-15s %3d' % (k, v))
-print('marker-uid keys unique: %d / %d  %s'
-      % (len(keys), len(pois), 'OK' if len(keys) == len(pois) else 'COLLISION'))
+print('CPS ids unique: %d / %d  %s'
+      % (len(ids), len(pois), 'OK' if len(ids) == len(pois) else 'COLLISION'))
 dupnames = [(k, v) for k, v in names.items() if v > 1]
 print('duplicate display names: %d' % len(dupnames))
 for k, v in sorted(dupnames, key=lambda x: -x[1])[:5]:
     print('   %dx %s' % (v, k))
+print('\nnow run:  python3 cps_validate.py --target public %s' % os.path.basename(OUT))

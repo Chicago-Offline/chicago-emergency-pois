@@ -33,7 +33,10 @@ This is a **dated snapshot of published open data, not a curated or verified lis
   are hand-corrected in the build; the underlying dataset is still wrong.
 - **Call 311 to confirm** before depending on any of this in an emergency.
 
-Every POI carries its originating dataset and fetch date in its `notes` field.
+Every POI carries its originating dataset and fetch date in its `dct:source`
+property - per feature, not just once for the file, because a set-level citation
+cannot tell you which of the eight datasets a given point came from, and ODbL
+attribution is owed per source.
 
 ## Provenance
 
@@ -52,26 +55,57 @@ All 723 records cite a source. See [ATTRIBUTION.md](ATTRIBUTION.md) and
 
 ## Schema
 
-`pois.json`:
+`pois.geojson` is plain GeoJSON - any GIS tool will open it - constrained to a
+profile called **Canonical Point Schema v1 (CPS)**. Validate with the bundled
+`cps_validate.py` (standard library only, no install):
+
+```bash
+python3 cps_validate.py --target public pois.geojson
+```
 
 ```json
 {
+  "type": "FeatureCollection",
   "name": "Chicago Emergency 2026",
   "description": "...",
-  "pois": [
+  "visibility": "public",
+  "dct:license": "ODbL-1.0",
+  "dct:source": "Chicago Data Portal ... and OpenStreetMap contributors ...",
+  "dct:modified": "2026-11-16",
+  "features": [
     {
-      "name": "Jesse Brown VA Medical Center",
-      "lat": 41.870282,
-      "lon": -87.677794,
-      "category": "hospital-er",
-      "icon": "Hospitals",
-      "address": "820 South Damen Avenue Chicago",
-      "notes": "... Source: OpenStreetMap via Overpass ..., fetched 2026-11-16.",
-      "tags": ["chicago", "24-7", "hospital", "er"]
+      "type": "Feature",
+      "id": "f1d2...",
+      "geometry": {"type": "Point", "coordinates": [-87.677794, 41.870282]},
+      "properties": {
+        "title": "Jesse Brown VA Medical Center",
+        "description": "Emergency department. ...",
+        "marker-symbol": "hospital",
+        "class": "hospital-er",
+        "osm": {"amenity": "hospital", "emergency": "yes"},
+        "addr:full": "820 South Damen Avenue Chicago",
+        "tags": ["chicago", "24-7", "hospital", "er"],
+        "dct:source": "OpenStreetMap contributors via Overpass ..., fetched 2026-11-16",
+        "dct:modified": "2026-11-16"
+      }
     }
   ]
 }
 ```
+
+Notes on the profile:
+
+- **`id` is `uuid5(CPS_NS, "<set>|<title>|<lon>,<lat>")`** - reproducible across
+  runs and machines, so rebuilding produces no diff noise, and it doubles as a
+  stable dedupe key downstream (re-importing a rebuilt set will not stack
+  duplicate markers).
+- **`class` vs `osm` vs `marker-symbol`** - `class` is our category, `osm` is the
+  authority on what the thing actually is, `marker-symbol` is only a rendering
+  hint ([Maki](https://labs.mapbox.com/maki-icons/) names). An `x-` prefix marks
+  a deliberate extension where Maki has no equivalent (`x-bleed-kit`), which is
+  what lets a validator tell an extension from a typo.
+- **`visibility` and `dct:license` are declared, never defaulted.** The validator
+  errors if either is missing rather than assuming one.
 
 Useful `tags` for filtering: `24-7`, `staffed`, `indoor`, `daytime-only`,
 `warming`, `cooling`, `wifi`, `restroom`, `hours-unverified`, `hours-corrected`.
@@ -79,8 +113,9 @@ Useful `tags` for filtering: `24-7`, `staffed`, `indoor`, `daytime-only`,
 ## Rebuilding
 
 ```bash
-python3 build_set.py                          # rewrites pois.json from raw/
-POI_OUT=/tmp/pois.json python3 build_set.py   # build elsewhere
+python3 build_set.py                             # rewrites pois.geojson from raw/
+POI_OUT=/tmp/pois.geojson python3 build_set.py   # build elsewhere
+python3 cps_validate.py --target public pois.geojson
 ```
 
 `raw/` holds the eight source snapshots so the set is reproducible from this

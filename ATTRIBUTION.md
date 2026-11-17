@@ -9,7 +9,7 @@ This database is assembled from two upstream sources with different terms.
 OSM data is published under the **Open Database License (ODbL) v1.0**. ODbL is a
 share-alike licence for *databases*: any publicly distributed derived database
 must carry the same licence and attribution. Because those 55 records are mixed
-into `pois.json`, the combined database in this repository is released under
+into `pois.geojson`, the combined database in this repository is released under
 ODbL - see [LICENSE](LICENSE).
 
 If you redistribute this data, or a package built from it, you must:
@@ -41,8 +41,8 @@ fitness for any purpose, and is not the author of this repository.
 
 The hours annotations on the six DFSS community service centers are
 hand-authored corrections, not upstream data. They are flagged
-`hours-corrected` in the `tags` field and the correction is described inline in
-each record's `notes`.
+`hours-corrected` in the `tags` property and the correction is described inline
+in each record's `description`.
 
 ## Not an official source
 
